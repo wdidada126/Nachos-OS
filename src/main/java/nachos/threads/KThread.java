@@ -318,7 +318,7 @@ public class KThread {
 	Lib.assertTrue(idleThread == null);
 	
 	idleThread = new KThread(new Runnable() {
-	    public void run() { while (true) yield(); }
+	    public void run() { while (true) Thread.yield(); }
 	});
 	idleThread.setName("idle");
 
